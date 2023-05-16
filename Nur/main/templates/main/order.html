@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+	<title>NUR</title>
+	<meta charset = "UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/order.css' %}">
+</head>
+<body>
+<div class="header-size"><p class="header-subtitle"><a class="hedercolor" href="/" style="text-decoration: none;">NUR</a></p></div>
+
+<p class="header-discription">Время - деньги.</p>
+<div class="order-block">
+    <h2 class="h-order">Оформление заказа</h2>
+<form action="{% url 'main:order' product.pk %}" method="post" enctype="multipart/form-data" class="order-f">
+    {% csrf_token %}
+    {{order_form}}
+    <button type="sumbit" class="btn-order">Заказать</button>
+</form>
+</div>
+
+</body>
+</html>

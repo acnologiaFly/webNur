@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+	<head>
+	<title>NUR</title>
+	<meta charset = "UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/index.css' %}">
+
+	</head>
+		<body>
+		<header class="header">
+			<div class="header-container">
+
+
+
+				<p class="header-subtitle">NUR</p>
+
+						<p class="header-discription">Время - деньги.</p>
+
+				<div class="buy-wrapper">
+
+					{%for c in categories %}
+					<a href="{{ c.get_absolute_url }}" class="bay-link">{{ c.name }}</a>
+					{% endfor %}
+
+				</div>
+				
+
+			</div>
+		</header>
+
+				{% for post in pr %}
+			<div class="container">
+				<div class="row">
+					<a href="{% url 'main:product' post.id  %}">
+					<img src="{{ post.photo.url }}" class="imgphoto"  alt="">
+					</a>
+				</div>
+
+					<div class="info">
+							<div class = "nameclock">
+							<h3> {{ post.name }} </h3>
+							</div>
+						<div class="info-price">
+								<span class="price">{{ post.price }}</span>
+								<button  class="button"><img  class="add-button" src="{% static '/img/add.png'%}"></button>
+							</div>
+						</div>
+					</div>
+			</div>
+		{% endfor %}
+
+	</body>
+</html>

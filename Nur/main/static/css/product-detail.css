@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  position: relative;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+.header-size{
+    width: 500px;
+}
+.header-subtitle{
+    line-weight: 100px;
+	margin-top: 10px;
+    margin-left: -190px;
+	font-size: 90px;
+	line-height: 150px;
+	transition: 1.6s;
+	text-align: center;
+
+
+}
+.header-subtitle:hover {
+	transform: scale(1.05);
+
+}
+.hedercolor{
+    color: #000000;
+
+}
+.header-discription{
+	margin-top: -44px;
+	font-size: 26px;
+	line-height: 30px;
+	margin-left: 62px;
+}
+
+.img_box{
+    weight: 100px;
+    height: 100px;
+}
+.imgphoto{
+    width:450px;
+    height:600px;
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 100px;
+    margin-left: 100px;
+    margin-top: 100px;
+
+}
+.product-heading{
+    margin-left: 900px;
+    margin-top: -150px;
+    font-size: 1.5rem;
+
+}
+
+.product-detail-side{
+    margin-left: 900px;
+    font-size: 3rem;
+    margin-top: 500px;
+
+}
+.opisanie{
+    margin-left: 900px;
+    margin-top: -500px;
+    font-size: 1.4rem;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+.opisanie-size{
+     width: 1600px;
+     height:500px;
+}
+.order{
+    margin-left: 900px;
+    margin-top: 0px;
+    display: block;
+	width: 278px;
+	height: 82px;
+	background-color: #161515;
+    color: red;
+	text-decoration: none;
+	font-size: 35px;
+	line-height: 82px;
+	text-align: center;
+	transition: 0.7s;
+
+}
+
+.order:hover {
+	transform: scale(1.05);
+
+}
+
+.bt_main {
+    color: white;
+}
